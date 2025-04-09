@@ -1,0 +1,20 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" name="CIS-332-Final-Project">
+    <output-path>$PROJECT_DIR$/out/artifacts/CIS_332_Final_Project</output-path>
+    <properties id="javafx-properties">
+      <options>
+        <option name="appClass" value="edu.cairn.cis332finalproject.HelloApplication" />
+        <option name="description" value="" />
+        <option name="htmlPlaceholderId" value="" />
+        <option name="title" value="" />
+        <option name="vendor" value="" />
+        <option name="version" value="" />
+      </options>
+    </properties>
+    <root id="root">
+      <element id="archive" name="CIS_332_Final_Project.jar">
+        <element id="module-output" name="CIS-332-Final-Project" />
+      </element>
+    </root>
+  </artifact>
+</component>

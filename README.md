@@ -2,14 +2,18 @@
 Team members:
 - AJ Chabin
 - Kaleb Powell
+- Samuel Chapin
+- Nicholas Simonett-Benson
+
+# Instructions
 
 ## Complete the following tasks as a group:
 
-1. Decide on a 'project leader'.
+-[ ] Decide on a 'project leader'.
 
-2. Create Github repo for project, share with professor (Zac Slade), and start a 'default' JavaFX app in the repo.
+-[x] Create Github repo for project, share with professor (Zac Slade), and start a 'default' JavaFX app in the repo.
 
-3. Complete first draft of Software Design Document.
+-[ ] Complete first draft of Software Design Document.
    a. For this project, your 'readme.md' file will act as the SDD.
    b. 'First draft' means that there is substantial content in each category
 
@@ -21,3 +25,13 @@ Team members:
 - [ ] User requirements in the form of USER STORIES https://www.atlassian.com/agile/project-management/user-stories
 - [ ] UML diagrams for each Java class you will create https://app.diagrams.net/ Only required for classes that are not controlling UI elements
 - [ ] UI mockup for each view/scene of the app https://mockitt.wondershare.com/
+
+# Project Description
+
+
+
+# Installation and Usage
+Install the Java 23 SE Development Kit (JDK) from the official [Oracle website](https://www.oracle.com/java/technologies/downloads/#java23).
+In IntelliJ, open the Maven tab, and select javafx:jlink under the Plugins section.
+This will create the app in the ./target/app directory. To run the app, navigate to the ./target/app/bin directory and run the app using the command:
+either the app file on Linux or MacOS, or the app.bat file on Windows.
