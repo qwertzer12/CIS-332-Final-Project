@@ -9,11 +9,11 @@ Team members:
 
 ## Complete the following tasks as a group:
 
--[ ] Decide on a 'project leader'.
+- [ ] Decide on a 'project leader'.
 
--[x] Create Github repo for project, share with professor (Zac Slade), and start a 'default' JavaFX app in the repo.
+- [x] Create Github repo for project, share with professor (Zac Slade), and start a 'default' JavaFX app in the repo.
 
--[ ] Complete first draft of Software Design Document.
+- [ ] Complete first draft of Software Design Document.
    a. For this project, your 'readme.md' file will act as the SDD.
    b. 'First draft' means that there is substantial content in each category
 
