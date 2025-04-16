@@ -3,7 +3,7 @@ Team members:
 - AJ Chabin
 - Kaleb Powell
 - Samuel Chapin
-- Nicholas Simonett-Benson
+- Nicholas Simonetti-Benson
 
 # Instructions
 
