@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.cairn.cis332finalproject.tipCalculatorLoader">
+   <fx:include source="navbar.fxml" />
+   <VBox alignment="CENTER" layoutX="184.0" layoutY="150.0" prefHeight="101.0" prefWidth="273.0"
+         AnchorPane.bottomAnchor="150.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0"
+         AnchorPane.topAnchor="150.0">
+      <Label fx:id="display" alignment="CENTER_RIGHT" prefHeight="32.0" prefWidth="200.0" text="\$0.00"
+             textAlignment="RIGHT" underline="true">
+         <VBox.margin>
+            <Insets/>
+         </VBox.margin>
+      </Label>
+      <HBox alignment="CENTER" prefHeight="25.0" prefWidth="200.0" spacing="10.0">
+         <VBox.margin>
+            <Insets/>
+         </VBox.margin>
+         <Button mnemonicParsing="false" onAction="#tenTip" text="10%"/>
+         <Button mnemonicParsing="false" onAction="#fifteenTip" text="15%"/>
+         <Button mnemonicParsing="false" onAction="#twentyTip" text="20%"/>
+      </HBox>
+      <TextField fx:id="input" maxHeight="25.0" maxWidth="-Infinity" onAction="#calculateTip" prefHeight="25.0"
+                 prefWidth="220.0" promptText="Enter a number">
+         <VBox.margin>
+            <Insets top="10.0"/>
+         </VBox.margin>
+      </TextField>
+   </VBox>
+</AnchorPane>

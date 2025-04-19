@@ -18,7 +18,7 @@ public class Preload {
 
     public static void preloadScenes() {
         try {
-            loaders.put("scene1", new FXMLLoader(Preload.class.getResource("/edu/cairn/cis332finalproject/scene1.fxml")));
+            loaders.put("tipCalculator", new FXMLLoader(Preload.class.getResource("/edu/cairn/cis332finalproject/tipCalculator.fxml")));
             loaders.put("scene2", new FXMLLoader(Preload.class.getResource("/edu/cairn/cis332finalproject/scene2.fxml")));
             loaders.put("scene3", new FXMLLoader(Preload.class.getResource("/edu/cairn/cis332finalproject/scene3.fxml")));
             loaders.put("main", new FXMLLoader(Preload.class.getResource("/edu/cairn/cis332finalproject/main.fxml")));

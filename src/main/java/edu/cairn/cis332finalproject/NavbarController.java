@@ -2,8 +2,13 @@ package edu.cairn.cis332finalproject;
 
 public class NavbarController {
 
-    public void loadScene1() {
-        Preload.switchScene("scene1");
+    public void loadTipCalculator() {
+        tipCalculatorLoader tipCalculatorLoader = Preload.getController("tipCalculator");
+        if (tipCalculatorLoader != null) {
+            tipCalculatorLoader.load();
+        }
+
+        Preload.switchScene("tipCalculator");
     }
 
     public void loadScene2() {
