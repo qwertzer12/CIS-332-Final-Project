@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.input.KeyCombination;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -19,6 +20,13 @@ public class MainLauncher extends Application {
             primaryStage.setScene(scene);
             primaryStage.setTitle("Login");
             primaryStage.setFullScreen(true);
+            primaryStage.setFullScreenExitKeyCombination(KeyCombination.NO_MATCH);
+            primaryStage.setFullScreenExitHint("");
+
+            // Set primary stage and preload scenes
+            NavbarController.setPrimaryStage(primaryStage);
+            NavbarController.preloadScenes();
+
             primaryStage.show();
         } catch (IOException e) {
             e.printStackTrace();
