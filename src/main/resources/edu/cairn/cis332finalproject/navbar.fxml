@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="edu.cairn.cis332finalproject.NavbarController"
+      spacing="10" alignment="CENTER" AnchorPane.topAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+    <Button text="Scene 1" onAction="#loadScene1" />
+    <Button text="Scene 2" onAction="#loadScene2" />
+    <Button text="Scene 3" onAction="#loadScene3" />
+</HBox>

@@ -13,15 +13,12 @@ public class MainLauncher extends Application {
     @Override
     public void start(Stage primaryStage) {
         try {
-            // Load the FXML file
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/edu/cairn/cis332finalproject/main.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/edu/cairn/cis332finalproject/login.fxml"));
             Parent root = loader.load();
-
-            // Set up the scene and stage
-            Scene scene = new Scene(root, 800, 600);
+            Scene scene = new Scene(root, 400, 300);
             primaryStage.setScene(scene);
-            primaryStage.setTitle("Full Screen Example App");
-            primaryStage.setFullScreen(true); // Force full screen
+            primaryStage.setTitle("Login");
+            primaryStage.setFullScreen(true);
             primaryStage.show();
         } catch (IOException e) {
             e.printStackTrace();

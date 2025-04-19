@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.cairn.cis332finalproject.LoginController">
+    <VBox alignment="CENTER" prefHeight="300" prefWidth="400" spacing="10" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="10.0">
+        <Label style="-fx-font-size: 24px;" text="Login" />
+        <TextField fx:id="usernameField" alignment="CENTER" maxWidth="200.0" promptText="Enter your username" />
+        <Button onAction="#handleLogin" text="Login" />
+    </VBox>
+</AnchorPane>
