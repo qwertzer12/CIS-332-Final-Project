@@ -49,7 +49,7 @@
             <configuration>
                 <archive>
                     <manifest>
-                        <mainClass>edu.cairn.cis332finalproject.HelloApplication</mainClass>
+                        <mainClass>edu.cairn.cis332finalproject.MainLauncher</mainClass>
                     </manifest>
                 </archive>
             </configuration>
@@ -71,7 +71,7 @@
                 <execution>
                     <id>default-cli</id>
                     <configuration>
-                        <mainClass>edu.cairn.cis332finalproject/edu.cairn.cis332finalproject.HelloApplication</mainClass>
+                        <mainClass>edu.cairn.cis332finalproject/edu.cairn.cis332finalproject.MainLauncher</mainClass>
                         <launcher>app</launcher>
                         <jlinkZipName>app</jlinkZipName>
                         <jlinkImageName>app</jlinkImageName>
