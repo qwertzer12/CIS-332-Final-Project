@@ -24,8 +24,8 @@ public class MainLauncher extends Application {
             primaryStage.setFullScreenExitHint("");
 
             // Set primary stage and preload scenes
-            NavbarController.setPrimaryStage(primaryStage);
-            NavbarController.preloadScenes();
+            Preload.setPrimaryStage(primaryStage);
+            Preload.preloadScenes();
 
             primaryStage.show();
         } catch (IOException e) {
