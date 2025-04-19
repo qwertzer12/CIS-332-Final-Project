@@ -1,22 +1,20 @@
 package edu.cairn.cis332finalproject;
 
-import javafx.event.ActionEvent;
-
 public class NavbarController {
 
-    public void loadScene1(ActionEvent event) {
+    public void loadScene1() {
         Preload.switchScene("scene1");
     }
 
-    public void loadScene2(ActionEvent event) {
+    public void loadScene2() {
         Preload.switchScene("scene2");
     }
 
-    public void loadScene3(ActionEvent event) {
+    public void loadScene3() {
         Preload.switchScene("scene3");
     }
 
-    public void handleLogout(ActionEvent event) {
+    public void handleLogout() {
         Preload.switchScene("login");
     }
 }

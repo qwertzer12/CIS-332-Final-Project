@@ -1,6 +1,5 @@
 package edu.cairn.cis332finalproject;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 
@@ -9,7 +8,7 @@ public class LoginController {
     private TextField usernameField;
 
     @FXML
-    private void handleLogin(ActionEvent event) {
+    private void handleLogin() {
         String username = usernameField.getText();
         if (username != null && !username.isEmpty()) {
             MainController mainController = Preload.getController("main");
