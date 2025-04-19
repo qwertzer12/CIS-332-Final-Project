@@ -22,6 +22,7 @@ public class Preload {
             scenes.put("scene2", FXMLLoader.load(NavbarController.class.getResource("/edu/cairn/cis332finalproject/scene2.fxml")));
             scenes.put("scene3", FXMLLoader.load(NavbarController.class.getResource("/edu/cairn/cis332finalproject/scene3.fxml")));
             scenes.put("main", FXMLLoader.load(NavbarController.class.getResource("/edu/cairn/cis332finalproject/main.fxml")));
+            scenes.put("login", FXMLLoader.load(NavbarController.class.getResource("/edu/cairn/cis332finalproject/login.fxml")));
         } catch (IOException e) {
             e.printStackTrace();
         }

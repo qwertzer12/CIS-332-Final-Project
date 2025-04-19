@@ -8,7 +8,7 @@ public class MainController {
     private Label data_field;
 
     @FXML
-    private void initialize() {
+    public void initialize() {
         String username = LoginController.getUsername();
         if (username != null && !username.isEmpty()) {
             data_field.setText("Welcome, " + username + "!");

@@ -11,8 +11,17 @@ public class LoginController {
 
     private static String username;
 
+    @FXML
+    private void initialize() {
+        usernameField.setPromptText("Enter your username");
+        setUsername(null);
+    }
+
     public static String getUsername() {
         return username;
+    }
+    public static void setUsername(String username) {
+        LoginController.username = username;
     }
 
     @FXML
