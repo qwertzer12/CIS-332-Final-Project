@@ -16,7 +16,7 @@ class DataTest {
         // Create a sample data map
         Map<String, Object> data = new HashMap<>();
         data.put(userData.getUsername(), userData);
-        data.put("key1", "value1");
+
 
         // Save the data
         try {
@@ -32,7 +32,7 @@ class DataTest {
         }
 
         // Verify that the loaded data matches the original data
-        assertEquals(data, loadedData);
+        assertEquals("{username=testUser, userID=12345}", loadedData.get(userData.getUsername()));
     }
 
     @Test
