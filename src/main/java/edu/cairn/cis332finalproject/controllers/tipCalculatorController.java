@@ -1,4 +1,4 @@
-package edu.cairn.cis332finalproject;
+package edu.cairn.cis332finalproject.controllers;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
@@ -6,7 +6,7 @@ import javafx.scene.control.TextField;
 
 import static java.lang.Float.parseFloat;
 
-public class tipCalculatorLoader {
+public class tipCalculatorController {
     @FXML
     private TextField input;
     @FXML

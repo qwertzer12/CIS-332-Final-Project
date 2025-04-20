@@ -1,11 +1,13 @@
-package edu.cairn.cis332finalproject;
+package edu.cairn.cis332finalproject.controllers;
+
+import edu.cairn.cis332finalproject.Preload;
 
 public class NavbarController {
 
     public void loadTipCalculator() {
-        tipCalculatorLoader tipCalculatorLoader = Preload.getController("tipCalculator");
-        if (tipCalculatorLoader != null) {
-            tipCalculatorLoader.load();
+        tipCalculatorController tipCalculatorController = Preload.getController("tipCalculator");
+        if (tipCalculatorController != null) {
+            tipCalculatorController.load();
         }
 
         Preload.switchScene("tipCalculator");

@@ -4,7 +4,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.cairn.cis332finalproject.tipCalculatorLoader">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.cairn.cis332finalproject.controllers.tipCalculatorController">
    <fx:include source="navbar.fxml" />
    <VBox alignment="CENTER" layoutX="184.0" layoutY="150.0" prefHeight="101.0" prefWidth="273.0"
          AnchorPane.bottomAnchor="150.0" AnchorPane.leftAnchor="200.0" AnchorPane.rightAnchor="200.0"
