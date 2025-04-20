@@ -18,7 +18,7 @@ public class MainLauncher extends Application {
             Parent root = loader.load();
             Scene scene = new Scene(root, 400, 300);
             primaryStage.setScene(scene);
-            primaryStage.setTitle("Login");
+            primaryStage.setTitle("Swiss Army App");
             primaryStage.setFullScreen(true);
             primaryStage.setFullScreenExitKeyCombination(KeyCombination.NO_MATCH);
             primaryStage.setFullScreenExitHint("");
