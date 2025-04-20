@@ -5,7 +5,7 @@ import edu.cairn.cis332finalproject.Preload;
 public class NavbarController {
 
     public void loadTipCalculator() {
-        tipCalculatorController tipCalculatorController = Preload.getController("tipCalculator");
+        TipCalculatorController tipCalculatorController = Preload.getController("tipCalculator");
         if (tipCalculatorController != null) {
             tipCalculatorController.load();
         }

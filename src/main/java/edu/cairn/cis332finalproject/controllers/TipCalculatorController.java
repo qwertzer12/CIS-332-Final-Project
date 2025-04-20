@@ -6,7 +6,7 @@ import javafx.scene.control.TextField;
 
 import static java.lang.Float.parseFloat;
 
-public class tipCalculatorController {
+public class TipCalculatorController {
     @FXML
     private TextField input;
     @FXML
