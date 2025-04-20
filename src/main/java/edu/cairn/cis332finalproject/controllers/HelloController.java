@@ -1,4 +1,4 @@
-package edu.cairn.cis332finalproject;
+package edu.cairn.cis332finalproject.controllers;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
