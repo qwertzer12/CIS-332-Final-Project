@@ -1,0 +1,42 @@
+package edu.cairn.cis332finalproject;
+
+import org.junit.jupiter.api.Test;
+
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+class DataTest {
+
+    @Test
+    void saveData() {
+        UserData userData = new UserData("testUser", 12345);
+        // Create a sample data map
+        Map<String, Object> data = new HashMap<>();
+        data.put(userData.getUsername(), userData);
+        data.put("key1", "value1");
+
+        // Save the data
+        try {
+            Data.saveData(data);
+        } catch (IOException e) {
+            fail("IOException should not be thrown");
+        }
+
+        // Load the data back
+        Map<String, Object> loadedData = Data.loadData();
+        for (Map.Entry<String, Object> entry : loadedData.entrySet()) {
+            System.out.println(entry.getKey() + ": " + entry.getValue());
+        }
+
+        // Verify that the loaded data matches the original data
+        assertEquals(data, loadedData);
+    }
+
+    @Test
+    void loadData() {
+        // Load the data
+    }
+}

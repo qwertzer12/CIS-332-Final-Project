@@ -1,6 +1,7 @@
 module edu.cairn.cis332finalproject {
     requires javafx.controls;
     requires javafx.fxml;
+    requires com.fasterxml.jackson.databind;
 
 
     opens edu.cairn.cis332finalproject to javafx.fxml;
