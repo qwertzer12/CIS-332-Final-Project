@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Data {
-    private static final String DATA_FILE = "data.json";
+    private static final String DATA_FILE = "d";
     private static final ObjectMapper OBJECT_MAPPER = new ObjectMapper();
 
     public static void saveData(Map<String, Object> data) throws IOException {
