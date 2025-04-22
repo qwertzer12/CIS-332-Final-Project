@@ -32,10 +32,11 @@ public class Preload {
         }
     }
 
-    public static void switchScene(String sceneName) {
+    public static void switchScene(String sceneName, String title) {
         Parent sceneRoot = loaders.get(sceneName).getRoot();
         if (sceneRoot != null && primaryStage != null) {
             primaryStage.getScene().setRoot(sceneRoot);
+            primaryStage.setTitle(title);
         }
     }
 

@@ -16,7 +16,7 @@ public class LoginController {
             if (mainController != null) {
                 mainController.setUsername(username);
             }
-            Preload.switchScene("main");
+            Preload.switchScene("main", "Swiss Army App");
         } else {
             usernameField.setPromptText("Username cannot be empty!");
         }

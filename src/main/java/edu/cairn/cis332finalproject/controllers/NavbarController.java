@@ -10,18 +10,18 @@ public class NavbarController {
             tipCalculatorController.load();
         }
 
-        Preload.switchScene("tipCalculator");
+        Preload.switchScene("tipCalculator", "Tip Calculator");
     }
 
     public void loadScene2() {
-        Preload.switchScene("scene2");
+        Preload.switchScene("scene2", "Scene 2");
     }
 
     public void loadScene3() {
-        Preload.switchScene("scene3");
+        Preload.switchScene("scene3", "Scene 3");
     }
 
     public void handleLogout() {
-        Preload.switchScene("login");
+        Preload.switchScene("login", "Login");
     }
 }
