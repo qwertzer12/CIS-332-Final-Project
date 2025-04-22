@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="controller.HangmanController">
+    <children>
+        <VBox alignment="CENTER" spacing="10.0" AnchorPane.topAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+            <Label fx:id="wordLabel" text="_ _ _ _ _" style="-fx-font-size: 24px;" />
+            <Label fx:id="messageLabel" text="" />
+            <TextField fx:id="guessInput" promptText="Enter a letter" maxWidth="100"/>
+            <Button text="Guess" onAction="#handleGuess"/>
+            <Label fx:id="attemptsLabel" text="Attempts left: 6"/>
+        </VBox>
+    </children>
+</AnchorPane>
