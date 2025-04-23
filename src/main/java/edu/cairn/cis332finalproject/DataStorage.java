@@ -6,7 +6,7 @@ import java.nio.file.Path;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Data {
+public class DataStorage {
     private static final String DATA_FILE = "d";
     private static final ObjectMapper OBJECT_MAPPER = new ObjectMapper();
 

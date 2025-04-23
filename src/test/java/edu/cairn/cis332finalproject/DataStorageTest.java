@@ -8,7 +8,7 @@ import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class DataTest {
+class DataStorageTest {
 
     @Test
     void saveData() {
@@ -20,13 +20,13 @@ class DataTest {
 
         // Save the data
         try {
-            Data.saveData(data);
+            DataStorage.saveData(data);
         } catch (IOException e) {
             fail("IOException should not be thrown");
         }
 
         // Load the data back
-        Map<String, Object> loadedData = Data.loadData();
+        Map<String, Object> loadedData = DataStorage.loadData();
         for (Map.Entry<String, Object> entry : loadedData.entrySet()) {
             System.out.println(entry.getKey() + ": " + entry.getValue());
         }
