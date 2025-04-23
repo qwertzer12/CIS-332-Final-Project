@@ -16,15 +16,44 @@ public class DataStorage {
     }
 
     public static Map<String, UserData> loadData() {
-        ObjectMapper OBJECT_MAPPER = new ObjectMapper();
         try{
-            Map<String, UserData> data = OBJECT_MAPPER.readValue(new File(DATA_FILE), OBJECT_MAPPER.getTypeFactory().constructMapType(HashMap.class, String.class, UserData.class));
-            return data;
+            return OBJECT_MAPPER.readValue(new File(DATA_FILE), OBJECT_MAPPER.getTypeFactory().constructMapType(HashMap.class, String.class, UserData.class));
         } catch (IOException e) {
             e.printStackTrace();
             return new HashMap<>();
         }
+    }
 
+    public static void saveUser(UserData user) {
+        Map<String, UserData> data = loadData();
+        if(data.containsKey(user.getUsername())) {
+            data.remove(user.getUsername());
+            data.put(user.getUsername(), user);
+        }
+        else {
+            data.put(user.getUsername(), user);
+        }
+        try {
+            saveData(data);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
+    public static UserData loadUser(String username) {
+        Map<String, UserData> data = loadData();
+        return data.getOrDefault(username, null);
+    }
+
+    public static void deleteUser(String username) {
+        Map<String, UserData> data = loadData();
+        if(data.containsKey(username)) {
+            data.remove(username);
+            try {
+                saveData(data);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
     }
 }

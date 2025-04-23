@@ -4,7 +4,7 @@ public class UserData {
     private String username;
     private int userID;
 
-    public UserData() {
+    public UserData() { // Blank constructor, required for Jackson
     }
 
     public UserData(String username, int userID) {

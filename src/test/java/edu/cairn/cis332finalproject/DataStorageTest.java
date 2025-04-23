@@ -37,4 +37,41 @@ class DataStorageTest {
 
         assertEquals(test1, test2);
     }
+
+    @Test
+    void testData2() {
+        Map<String, UserData> data = new HashMap<>();
+        data.put("testUser1", new UserData("testUser1", 12345));
+        data.put("testUser2", new UserData("testUser2", 67890));
+        data.put("testUser3", new UserData("testUser3", 54321));
+        data.put("testUser4", new UserData("testUser4", 98765));
+        data.put("testUser5", new UserData("testUser5", 13579));
+
+        // Save the data
+        try {
+            DataStorage.saveData(data);
+        } catch (IOException e) {
+            fail("IOException should not be thrown");
+        }
+
+        data.put("testUser6", new UserData("testUser6", 12345));
+
+        // Save the data again
+
+
+        // Save nothing
+        try {
+            DataStorage.saveData(new HashMap<>());
+        } catch (IOException e) {
+            fail("IOException should not be thrown");
+        }
+
+        // Load the data back
+        Map<String, UserData> loadedData = DataStorage.loadData();
+        for (Map.Entry<String, UserData> entry : loadedData.entrySet()) {
+            System.out.println(entry.getKey() + ": " + entry.getValue());
+        }
+        System.out.println("Loaded data: " + loadedData);
+
+    }
 }
