@@ -4,7 +4,7 @@ module edu.cairn.cis332finalproject {
     requires com.fasterxml.jackson.databind;
 
 
-    opens edu.cairn.cis332finalproject to javafx.fxml;
+    opens edu.cairn.cis332finalproject to javafx.fxml, com.fasterxml.jackson.databind;
     exports edu.cairn.cis332finalproject;
     exports edu.cairn.cis332finalproject.controllers;
     opens edu.cairn.cis332finalproject.controllers to javafx.fxml;

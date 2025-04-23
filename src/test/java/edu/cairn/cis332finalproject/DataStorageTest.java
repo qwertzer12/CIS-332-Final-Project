@@ -74,4 +74,9 @@ class DataStorageTest {
         System.out.println("Loaded data: " + loadedData);
 
     }
+
+    @Test
+    void loadBlank(){
+        assertNull(DataStorage.loadUser("DoesNotExist"));
+    }
 }
