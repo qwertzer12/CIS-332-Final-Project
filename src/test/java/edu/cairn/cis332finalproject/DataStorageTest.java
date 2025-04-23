@@ -14,9 +14,8 @@ class DataStorageTest {
     void saveData() {
         UserData userData = new UserData("testUser", 12345);
         // Create a sample data map
-        Map<String, Object> data = new HashMap<>();
+        Map<String, UserData> data = new HashMap<>();
         data.put(userData.getUsername(), userData);
-
 
         // Save the data
         try {
@@ -26,17 +25,16 @@ class DataStorageTest {
         }
 
         // Load the data back
-        Map<String, Object> loadedData = DataStorage.loadData();
-        for (Map.Entry<String, Object> entry : loadedData.entrySet()) {
+        Map<String, UserData> loadedData = DataStorage.loadData();
+        for (Map.Entry<String, UserData> entry : loadedData.entrySet()) {
             System.out.println(entry.getKey() + ": " + entry.getValue());
         }
 
         // Verify that the loaded data matches the original data
-        assertEquals("{username=testUser, userID=12345}", loadedData.get(userData.getUsername()));
-    }
+        UserData testUser = (UserData) loadedData.get(userData.getUsername());
+        String test1 = testUser.getUsername();
+        String test2 = userData.getUsername();
 
-    @Test
-    void loadData() {
-        // Load the data
+        assertEquals(test1, test2);
     }
 }
