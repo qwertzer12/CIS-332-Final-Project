@@ -11,6 +11,10 @@ import java.io.IOException;
 
 public class MainLauncher extends Application {
 
+    public static void main(String[] args) {
+        launch(args);
+    }
+
     @Override
     public void start(Stage primaryStage) {
         try {
@@ -31,9 +35,5 @@ public class MainLauncher extends Application {
         } catch (IOException e) {
             e.printStackTrace();
         }
-    }
-
-    public static void main(String[] args) {
-        launch(args);
     }
 }

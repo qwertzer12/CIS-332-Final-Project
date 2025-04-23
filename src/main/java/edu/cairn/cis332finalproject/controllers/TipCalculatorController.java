@@ -24,7 +24,7 @@ public class TipCalculatorController {
     }
 
     @FXML
-    private void calculateTip(){
+    private void calculateTip() {
         String amount = input.getText();
         if (amount != null && !amount.isEmpty() && tipPercent != 0.0f) {
             try {
@@ -44,19 +44,19 @@ public class TipCalculatorController {
     }
 
     @FXML
-    private void tenTip(){
+    private void tenTip() {
         tipPercent = 0.1f;
         calculateTip();
     }
 
     @FXML
-    private void fifteenTip(){
+    private void fifteenTip() {
         tipPercent = 0.15f;
         calculateTip();
     }
 
     @FXML
-    private void twentyTip(){
+    private void twentyTip() {
         tipPercent = 0.20f;
         calculateTip();
     }

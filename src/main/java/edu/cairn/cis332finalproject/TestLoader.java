@@ -10,6 +10,10 @@ import java.util.Objects;
 
 public class TestLoader extends Application {
 
+    public static void main(String[] args) {
+        launch(args);
+    }
+
     @Override
     public void start(Stage primaryStage) throws Exception {
         String file = "tipCalculator";
@@ -17,9 +21,5 @@ public class TestLoader extends Application {
         primaryStage.setTitle("Tip Calculator");
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
-    }
-
-    public static void main(String[] args) {
-        launch(args);
     }
 }

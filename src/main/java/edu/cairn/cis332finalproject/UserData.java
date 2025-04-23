@@ -1,13 +1,13 @@
 package edu.cairn.cis332finalproject;
 
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
+import java.util.LinkedList;
+import java.util.Queue;
 
 public class UserData {
+    private final Queue<Date> logins = new LinkedList<>();
     private String username;
     private int userID;
-    private final List<Date> logins = new ArrayList<>();
 
     public UserData() { // Blank constructor, required for Jackson
     }
@@ -37,11 +37,12 @@ public class UserData {
     public void updateLoginTime() {
         logins.add(new Date());
         if (logins.size() > 10) {
-            logins.removeFirst(); // Remove the oldest login time if there are more than 10
+            logins.remove(); // Remove the oldest login time if there are more than 10
         }
         System.out.println("Login times updated: " + logins);
     }
-    public List<Date> getLogins() {
+
+    public Queue<Date> getLogins() {
         return logins;
     }
 }
