@@ -15,11 +15,15 @@ import javafx.scene.control.TextField;
  * and switches to the main scene.
  * If the username is empty,
  * it sets a prompt text to inform the user.
+ * 
+ * @author AJ Chabin
  */
 public class LoginController {
     /**
      * Creates a new LoginController instance.
      * Default constructor used by FXML loader.
+     * 
+     * @author AJ Chabin
      */
     public LoginController() {
     }
@@ -28,6 +32,17 @@ public class LoginController {
     @FXML
     private TextField usernameField;
 
+    /**
+     * Handles the login process.
+     * Retrieves the username from the TextField,
+     * loads the user data from storage,
+     * updates the login time,
+     * and switches to the main scene.
+     * If the username is empty,
+     * sets a prompt text to inform the user.
+     * 
+     * @author AJ Chabin
+     */
     @FXML
     private void handleLogin() {
         String username = usernameField.getText();

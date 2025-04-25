@@ -12,11 +12,15 @@ import java.io.IOException;
 /**
  * Main application launcher class.
  * Initializes the application with the login scene and preloads other scenes.
+ *
+ * @author AJ Chabin
  */
 public class MainLauncher extends Application {
     /**
      * Creates a new MainLauncher instance.
      * Default constructor used by JavaFX.
+     *
+     * @author AJ Chabin
      */
     public MainLauncher() {
     }
@@ -25,6 +29,7 @@ public class MainLauncher extends Application {
      * Main entry point for the application.
      *
      * @param args command line arguments
+     * @author AJ Chabin
      */
     public static void main(String[] args) {
         launch(args);
@@ -35,6 +40,7 @@ public class MainLauncher extends Application {
      * Sets up full screen mode and preloads all scenes.
      *
      * @param primaryStage the primary stage for this application
+     * @author AJ Chabin
      */
     @Override
     public void start(Stage primaryStage) {

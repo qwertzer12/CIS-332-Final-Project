@@ -7,6 +7,8 @@ import java.util.Queue;
 /**
  * Stores user information and login history for the application.
  * Maintains a queue of the last 10 login timestamps.
+ *
+ * @author AJ Chabin
  */
 public class UserData {
     private final Queue<Date> logins = new LinkedList<>();
@@ -15,6 +17,8 @@ public class UserData {
 
     /**
      * Default constructor for Jackson deserialization.
+     *
+     * @author AJ Chabin
      */
     public UserData() { // Blank constructor, required for Jackson
     }
@@ -25,6 +29,7 @@ public class UserData {
      *
      * @param username the user's name
      * @param userID the unique identifier for the user
+     * @author AJ Chabin
      */
     public UserData(String username, int userID) {
         this.username = username;
@@ -36,6 +41,7 @@ public class UserData {
      * Gets the username of this user.
      *
      * @return the username
+     * @author AJ Chabin
      */
     public String getUsername() {
         return username;
@@ -45,6 +51,7 @@ public class UserData {
      * Sets the username of this user.
      *
      * @param username the new username
+     * @author AJ Chabin
      */
     public void setUsername(String username) {
         this.username = username;
@@ -54,6 +61,7 @@ public class UserData {
      * Gets the unique ID for this user.
      *
      * @return the user ID
+     * @author AJ Chabin
      */
     public int getUserID() {
         return userID;
@@ -63,6 +71,7 @@ public class UserData {
      * Sets the unique ID for this user.
      *
      * @param userID the new user ID
+     * @author AJ Chabin
      */
     public void setUserID(int userID) {
         this.userID = userID;
@@ -71,6 +80,8 @@ public class UserData {
     /**
      * Records a new login event with the current timestamp.
      * Removes the oldest login if there are more than 10 entries.
+     *
+     * @author AJ Chabin
      */
     public void updateLoginTime() {
         logins.add(new Date());
@@ -84,6 +95,7 @@ public class UserData {
      * Gets the login history for this user.
      *
      * @return a queue containing the last 10 login times
+     * @author AJ Chabin
      */
     public Queue<Date> getLogins() {
         return logins;

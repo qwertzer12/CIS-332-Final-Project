@@ -9,35 +9,44 @@ import static java.lang.Float.parseFloat;
 /**
  * Controller for the tip calculator functionality.
  * Allows users to calculate tips based on bill amount and percentage.
+ * 
+ * @author AJ Chabin
  */
 public class TipCalculatorController {
     /**
      * Creates a new TipCalculatorController instance.
      * Default constructor used by FXML loader.
+     * 
+     * @author AJ Chabin
      */
     public TipCalculatorController() {
     }
 
     /**
      * Text field for bill amount input.
+     * 
      */
     @FXML
     private TextField input;
 
     /**
      * Label for displaying calculated tip amount.
+     * 
      */
     @FXML
     private Label display;
 
     /**
      * The current tip percentage as a decimal value.
+     * 
      */
     private float tipPercent;
 
     /**
      * Initializes the tip calculator view.
      * Resets display and input fields to their default states.
+     * 
+     * @author AJ Chabin
      */
     @FXML
     public void load() {
@@ -49,6 +58,8 @@ public class TipCalculatorController {
     /**
      * Calculates the tip based on input amount and selected percentage.
      * Validates input and displays appropriate messages for invalid inputs.
+     * 
+     * @author AJ Chabin
      */
     @FXML
     private void calculateTip() {
@@ -71,6 +82,8 @@ public class TipCalculatorController {
 
     /**
      * Sets tip percentage to 10% and calculates the tip.
+     * 
+     * @author AJ Chabin
      */
     @FXML
     private void tenTip() {
@@ -80,6 +93,8 @@ public class TipCalculatorController {
 
     /**
      * Sets tip percentage to 15% and calculates the tip.
+     * 
+     * @author AJ Chabin
      */
     @FXML
     private void fifteenTip() {
@@ -89,6 +104,8 @@ public class TipCalculatorController {
 
     /**
      * Sets tip percentage to 20% and calculates the tip.
+     * 
+     * @author AJ Chabin
      */
     @FXML
     private void twentyTip() {

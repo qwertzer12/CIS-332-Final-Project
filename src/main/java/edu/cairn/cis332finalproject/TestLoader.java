@@ -11,11 +11,15 @@ import java.util.Objects;
 /**
  * Test application launcher that loads the tip calculator view.
  * Used for testing individual components of the application.
+ * 
+ * @author AJ Chabin
  */
 public class TestLoader extends Application {
     /**
      * Creates a new TestLoader instance.
      * Default constructor used by JavaFX.
+     * 
+     * @author AJ Chabin
      */
     public TestLoader() {
     }
@@ -24,6 +28,7 @@ public class TestLoader extends Application {
      * Main entry point for the test application.
      *
      * @param args command line arguments
+     * @author AJ Chabin
      */
     public static void main(String[] args) {
         launch(args);
@@ -34,6 +39,7 @@ public class TestLoader extends Application {
      *
      * @param primaryStage the primary stage for this application
      * @throws Exception if an error occurs during loading
+     * @author AJ Chabin
      */
     @Override
     public void start(Stage primaryStage) throws Exception {
