@@ -19,15 +19,19 @@ jobs:
           distribution: 'temurin'
           java-version: '23'
 
-      - name: Download JavaFX and Jackson
+      - name: Build project to download dependencies
+        run: mvn clean compile
+
+      - name: Copy JavaFX and Jackson to lib/
         run: |
           mkdir -p lib
-          wget https://download2.gluonhq.com/openjfx/24/openjfx-24.0.1_linux-x64_bin-sdk.zip
-          unzip openjfx-24.0.1_linux-x64_bin-sdk.zip -d $HOME/javafx
-          
-          wget https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-core/2.18.3/jackson-core-2.18.3.jar -P lib
-          wget https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.18.3/jackson-databind-2.18.3.jar -P lib
-          wget https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.18.3/jackson-annotations-2.18.3.jar -P lib
+          cp ~/.m2/repository/org/openjfx/javafx-controls/24.0.1/javafx-controls-24.0.1.jar lib/
+          cp ~/.m2/repository/org/openjfx/javafx-fxml/24.0.1/javafx-fxml-24.0.1.jar lib/
+
+          cp ~/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.15.3/jackson-core-2.15.3.jar lib/
+          cp ~/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.15.3/jackson-databind-2.15.3.jar lib/
+          cp ~/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.15.3/jackson-annotations-2.15.3.jar lib/
+      
 
       - name: Generate JavaDoc
         run: |
