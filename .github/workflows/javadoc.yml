@@ -22,7 +22,7 @@ jobs:
       - name: Generate JavaDoc
         run: |
           mkdir -p javadocs
-          javadoc -d javadocs -sourcepath src -subpackages com.yourname.project
+          javadoc -d javadocs -sourcepath src -subpackages edu.cairn.cis332finalproject
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
