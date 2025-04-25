@@ -8,12 +8,27 @@ import javafx.stage.Stage;
 
 import java.util.Objects;
 
+/**
+ * Test application launcher that loads the tip calculator view.
+ * Used for testing individual components of the application.
+ */
 public class TestLoader extends Application {
 
+    /**
+     * Main entry point for the test application.
+     *
+     * @param args command line arguments
+     */
     public static void main(String[] args) {
         launch(args);
     }
 
+    /**
+     * Initializes the JavaFX stage with the tip calculator scene.
+     *
+     * @param primaryStage the primary stage for this application
+     * @throws Exception if an error occurs during loading
+     */
     @Override
     public void start(Stage primaryStage) throws Exception {
         String file = "tipCalculator";

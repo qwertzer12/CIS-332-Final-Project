@@ -8,14 +8,28 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Manages scene preloading and navigation for the application.
+ * Preloads all FXML scenes to improve performance when switching between views.
+ */
 public class Preload {
     private static final Map<String, FXMLLoader> loaders = new HashMap<>();
     private static Stage primaryStage;
 
+    /**
+     * Sets the primary stage for scene switching.
+     *
+     * @param primaryStage the main application window
+     */
     public static void setPrimaryStage(Stage primaryStage) {
         Preload.primaryStage = primaryStage;
     }
 
+    /**
+     * Preloads all application scenes to improve performance.
+     * Loads each FXML file and stores the loader for later use.
+     * This allows for faster scene switching and controller access.
+     */
     public static void preloadScenes() {
         try {
             loaders.put("tipCalculator", new FXMLLoader(Preload.class.getResource("/edu/cairn/cis332finalproject/tipCalculator.fxml")));
@@ -32,6 +46,12 @@ public class Preload {
         }
     }
 
+    /**
+     * Switches the displayed scene in the primary stage.
+     *
+     * @param sceneName the name of the scene to display
+     * @param title the window title to set
+     */
     public static void switchScene(String sceneName, String title) {
         Parent sceneRoot = loaders.get(sceneName).getRoot();
         if (sceneRoot != null && primaryStage != null) {
@@ -40,6 +60,13 @@ public class Preload {
         }
     }
 
+    /**
+     * Gets the controller for a specific scene.
+     *
+     * @param <T> the type of controller to return
+     * @param sceneName the name of the scene
+     * @return the controller instance or null if not found
+     */
     public static <T> T getController(String sceneName) {
         FXMLLoader loader = loaders.get(sceneName);
         return loader != null ? loader.getController() : null;

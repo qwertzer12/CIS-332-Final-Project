@@ -9,12 +9,27 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+/**
+ * Main application launcher class.
+ * Initializes the application with the login scene and preloads other scenes.
+ */
 public class MainLauncher extends Application {
 
+    /**
+     * Main entry point for the application.
+     *
+     * @param args command line arguments
+     */
     public static void main(String[] args) {
         launch(args);
     }
 
+    /**
+     * Initializes the primary stage with the login scene.
+     * Sets up full screen mode and preloads all scenes.
+     *
+     * @param primaryStage the primary stage for this application
+     */
     @Override
     public void start(Stage primaryStage) {
         try {

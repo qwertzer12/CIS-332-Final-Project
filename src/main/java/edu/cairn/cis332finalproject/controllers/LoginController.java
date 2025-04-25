@@ -6,6 +6,16 @@ import edu.cairn.cis332finalproject.UserData;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 
+
+/**
+ * LoginController handles the login process for the application.
+ * It retrieves the username from the TextField,
+ * loads the user data from storage,
+ * updates the login time,
+ * and switches to the main scene.
+ * If the username is empty,
+ * it sets a prompt text to inform the user.
+ */
 public class LoginController {
     @FXML
     private TextField usernameField;
