@@ -27,12 +27,19 @@ jobs:
           unzip openjfx-20_linux-x64_bin-sdk.zip -d $HOME/javafx
         shell: bash
 
+      - name: Download Jackson Dependencies
+        run: |
+          mkdir -p lib
+          wget https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-core/2.15.3/jackson-core-2.15.3.jar -P lib
+          wget https://repo1.maven.org/maven2/com/fasterxml/jackson/databind/jackson-databind/2.15.3/jackson-databind-2.15.3.jar -P lib
+          wget https://repo1.maven.org/maven2/com/fasterxml/jackson/annotations/jackson-annotations/2.15.3/jackson-annotations-2.15.3.jar -P lib
+
       - name: Generate JavaDoc
         run: |
           mkdir -p javadocs
           javadoc \
             -d javadocs \
-            --module-path $HOME/javafx/javafx-sdk-20/lib \
+            --module-path "$HOME/javafx/javafx-sdk-20/lib:lib" \
             --add-modules javafx.controls,javafx.fxml \
             -sourcepath src/main/java \
             -subpackages edu.cairn.cis332finalproject
