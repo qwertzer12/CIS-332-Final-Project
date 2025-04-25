@@ -102,11 +102,13 @@
                     </execution>
                 </executions>
                 <configuration>
+                    <aggregate>false</aggregate>
                     <outputDirectory>${project.basedir}/</outputDirectory>
                     <reportOutputDirectory>${project.basedir}/</reportOutputDirectory>
                     <destDir>javadocs</destDir>
                 </configuration>
             </plugin>
+
         </plugins>
     </build>
 </project>
