@@ -95,7 +95,8 @@
                 <version>3.6.3</version>
                 <executions>
                     <execution>
-                        <id>attach-javadocs</id>
+                        <id>generate-docs</id>
+                        <phase>package</phase>
                         <goals>
                             <goal>javadoc</goal>
                         </goals>
@@ -103,12 +104,10 @@
                 </executions>
                 <configuration>
                     <aggregate>false</aggregate>
-                    <outputDirectory>${project.basedir}/</outputDirectory>
-                    <reportOutputDirectory>${project.basedir}/</reportOutputDirectory>
                     <destDir>javadocs</destDir>
+                    <outputDirectory>${project.basedir}</outputDirectory>
                 </configuration>
             </plugin>
-
         </plugins>
     </build>
 </project>
