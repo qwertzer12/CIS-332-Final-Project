@@ -19,10 +19,8 @@ jobs:
           distribution: 'temurin'
           java-version: '23'
 
-      - name: Generate JavaDoc
-        run: |
-          mkdir -p javadocs
-          javadoc -d javadocs -sourcepath src -subpackages edu.cairn.cis332finalproject
+      - name: Generate JavaDoc via Maven
+        run: mvn javadoc:javadoc
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
