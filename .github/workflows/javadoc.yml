@@ -19,8 +19,24 @@ jobs:
           distribution: 'temurin'
           java-version: '23'
 
-      - name: Generate JavaDoc via Maven
-        run: mvn javadoc:javadoc
+      - name: Install JavaFX (Linux only)
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y unzip wget
+          wget https://download2.gluonhq.com/openjfx/20/openjfx-20_linux-x64_bin-sdk.zip
+          unzip openjfx-20_linux-x64_bin-sdk.zip -d $HOME/javafx
+        shell: bash
+
+      - name: Generate JavaDoc
+        run: |
+          mkdir -p javadocs
+          javadoc \
+            -d javadocs \
+            --module-path $HOME/javafx/javafx-sdk-20/lib \
+            --add-modules javafx.controls,javafx.fxml \
+            -sourcepath src/main/java \
+            -subpackages edu.cairn.cis332finalproject
+        shell: bash
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
