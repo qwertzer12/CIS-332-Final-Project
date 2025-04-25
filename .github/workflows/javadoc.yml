@@ -23,24 +23,20 @@ jobs:
         run: mvn clean install -DskipTests
 
 
-      - name: Copy JavaFX and Jackson to lib/
+      - name: Prepare lib directory with JavaFX and Jackson
         run: |
           mkdir -p lib
-          cp ~/.m2/repository/org/openjfx/javafx-controls/24.0.1/javafx-controls-24.0.1.jar lib/
-          cp ~/.m2/repository/org/openjfx/javafx-fxml/24.0.1/javafx-fxml-24.0.1.jar lib/
+          mvn dependency:copy-dependencies -DincludeScope=compile -DoutputDirectory=lib
+          find ~/.m2/repository/org/openjfx -name "*.jar" -exec cp {} lib/ \;
+          find ~/.m2/repository/com/fasterxml/jackson/core -name "*.jar" -exec cp {} lib/ \;
 
-          cp ~/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.18.3/jackson-core-2.18.3.jar lib/
-          cp ~/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.18.3/jackson-databind-2.18.3.jar lib/
-          cp ~/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.18.3/jackson-annotations-2.18.3.jar lib/
-      
-
-      - name: Generate JavaDoc
+      - name: Generate Javadocs (module-path aware)
         run: |
           mkdir -p javadocs
           javadoc \
-            -d javadocs \
-            --module-path "$HOME/javafx/javafx-sdk-24.0.1/lib:lib" \
+            --module-path lib \
             --add-modules javafx.controls,javafx.fxml \
+            -d javadocs \
             -sourcepath src/main/java \
             -subpackages edu.cairn.cis332finalproject
 
