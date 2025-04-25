@@ -92,16 +92,11 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
-                <version>3.4.1</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>javadoc</goal>
-                        </goals>
-                    </execution>
-                </executions>
+                <version>3.6.3</version>
                 <configuration>
-                    <destDir>docs</destDir>
+                    <outputDirectory>${project.basedir}/</outputDirectory>
+                    <reportOutputDirectory>${project.basedir}/</reportOutputDirectory>
+                    <destDir>javadocs</destDir>
                 </configuration>
             </plugin>
         </plugins>

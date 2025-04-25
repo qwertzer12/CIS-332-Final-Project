@@ -12,6 +12,13 @@ import static java.lang.Float.parseFloat;
  */
 public class TipCalculatorController {
     /**
+     * Creates a new TipCalculatorController instance.
+     * Default constructor used by FXML loader.
+     */
+    public TipCalculatorController() {
+    }
+
+    /**
      * Text field for bill amount input.
      */
     @FXML

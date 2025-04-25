@@ -13,6 +13,13 @@ import java.util.Map;
  * Preloads all FXML scenes to improve performance when switching between views.
  */
 public class Preload {
+    /**
+     * Private constructor to prevent instantiation of this utility class.
+     */
+    private Preload() {
+        // Utility class should not be instantiated
+    }
+
     private static final Map<String, FXMLLoader> loaders = new HashMap<>();
     private static Stage primaryStage;
 

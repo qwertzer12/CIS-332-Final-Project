@@ -12,6 +12,13 @@ import java.util.Map;
  * Uses Jackson for JSON serialization and deserialization.
  */
 public class DataStorage {
+    /**
+     * Private constructor to prevent instantiation of this utility class.
+     */
+    private DataStorage() {
+        // Utility class should not be instantiated
+    }
+
     private static final String DATA_FILE = "data.json";
     private static final ObjectMapper OBJECT_MAPPER = new ObjectMapper();
 

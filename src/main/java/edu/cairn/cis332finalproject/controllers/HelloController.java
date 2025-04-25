@@ -9,6 +9,13 @@ import javafx.scene.control.Label;
  */
 public class HelloController {
     /**
+     * Creates a new HelloController instance.
+     * Default constructor used by FXML loader.
+     */
+    public HelloController() {
+    }
+
+    /**
      * Label for displaying welcome message.
      */
     @FXML

@@ -1,3 +1,7 @@
+/**
+ * Main module for the CIS-332 Final Project application.
+ * Provides JavaFX-based UI components and data persistence functionality.
+ */
 module edu.cairn.cis332finalproject {
     requires javafx.controls;
     requires javafx.fxml;

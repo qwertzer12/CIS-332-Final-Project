@@ -17,6 +17,14 @@ import javafx.scene.control.TextField;
  * it sets a prompt text to inform the user.
  */
 public class LoginController {
+    /**
+     * Creates a new LoginController instance.
+     * Default constructor used by FXML loader.
+     */
+    public LoginController() {
+    }
+
+
     @FXML
     private TextField usernameField;
 

@@ -7,6 +7,12 @@ import edu.cairn.cis332finalproject.Preload;
  * Handles scene transitions between different application views.
  */
 public class NavbarController {
+    /**
+     * Creates a new NavbarController instance.
+     * Default constructor used by FXML loader.
+     */
+    public NavbarController() {
+    }
 
     /**
      * Switches to the tip calculator view.

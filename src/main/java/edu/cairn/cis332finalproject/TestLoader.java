@@ -13,6 +13,12 @@ import java.util.Objects;
  * Used for testing individual components of the application.
  */
 public class TestLoader extends Application {
+    /**
+     * Creates a new TestLoader instance.
+     * Default constructor used by JavaFX.
+     */
+    public TestLoader() {
+    }
 
     /**
      * Main entry point for the test application.

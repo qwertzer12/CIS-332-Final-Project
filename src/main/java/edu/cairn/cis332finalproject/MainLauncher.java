@@ -14,6 +14,12 @@ import java.io.IOException;
  * Initializes the application with the login scene and preloads other scenes.
  */
 public class MainLauncher extends Application {
+    /**
+     * Creates a new MainLauncher instance.
+     * Default constructor used by JavaFX.
+     */
+    public MainLauncher() {
+    }
 
     /**
      * Main entry point for the application.
