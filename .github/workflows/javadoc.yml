@@ -19,8 +19,9 @@ jobs:
           distribution: 'temurin'
           java-version: '23'
 
-      - name: Build project to download dependencies
-        run: mvn clean compile
+      - name: Build project and download all dependencies
+        run: mvn clean install -DskipTests
+
 
       - name: Copy JavaFX and Jackson to lib/
         run: |
