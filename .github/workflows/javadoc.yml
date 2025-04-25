@@ -29,9 +29,9 @@ jobs:
           cp ~/.m2/repository/org/openjfx/javafx-controls/24.0.1/javafx-controls-24.0.1.jar lib/
           cp ~/.m2/repository/org/openjfx/javafx-fxml/24.0.1/javafx-fxml-24.0.1.jar lib/
 
-          cp ~/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.15.3/jackson-core-2.15.3.jar lib/
-          cp ~/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.15.3/jackson-databind-2.15.3.jar lib/
-          cp ~/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.15.3/jackson-annotations-2.15.3.jar lib/
+          cp ~/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.18.3/jackson-core-2.18.3.jar lib/
+          cp ~/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.18.3/jackson-databind-2.18.3.jar lib/
+          cp ~/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.18.3/jackson-annotations-2.18.3.jar lib/
       
 
       - name: Generate JavaDoc
