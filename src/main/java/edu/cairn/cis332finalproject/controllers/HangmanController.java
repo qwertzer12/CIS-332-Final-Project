@@ -9,6 +9,19 @@ import javafx.scene.control.TextField;
  * Manages the UI interactions and game logic.
  */
 public class HangmanController {
+    public void load() {
+        // Reset game state
+        currentGuess = new StringBuilder();
+        currentGuess.append("_ ".repeat(wordToGuess.length()));
+        remainingAttempts = 6;
+
+        // Reset UI elements
+        wordLabel.setText(currentGuess.toString().trim());
+        guessInput.setText("");
+        guessInput.setDisable(false);  // Re-enable input if it was disabled after game end
+        guessInput.requestFocus();
+        messageLabel.setText("New game started! You have " + remainingAttempts + " attempts left.");
+    }
     /** The word that the player needs to guess. */
     private final String wordToGuess = "banana"; // You can replace this later with a random word!
 
@@ -37,9 +50,7 @@ public class HangmanController {
     @FXML
     public void initialize() {
         currentGuess = new StringBuilder();
-        for (int i = 0; i < wordToGuess.length(); i++) {
-            currentGuess.append("_ ");
-        }
+        currentGuess.append("_ ".repeat(wordToGuess.length()));
         wordLabel.setText(currentGuess.toString().trim());
     }
 
