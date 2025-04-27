@@ -6,7 +6,7 @@
       AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" xmlns="http://javafx.com/javafx/17.0.12"
       fx:controller="edu.cairn.cis332finalproject.controllers.NavbarController">
     <Button onAction="#loadTipCalculator" text="Tip Calculator"/>
-    <Button onAction="#loadScene2" text="Scene 2"/>
+    <Button onAction="#loadHangman" text="Hangman"/>
     <Button onAction="#loadScene3" text="Scene 3"/>
     <Region HBox.hgrow="ALWAYS"/>
     <Button onAction="#handleLogout" text="Logout"/>

@@ -8,9 +8,9 @@ import javafx.scene.control.TextField;
  * Controller class for Scene2, where the Hangman game is played.
  * Manages the UI interactions and game logic.
  */
-public class Scene2 {
+public class HangmanController {
     /** The word that the player needs to guess. */
-    private String wordToGuess = "banana"; // You can replace this later with a random word!
+    private final String wordToGuess = "banana"; // You can replace this later with a random word!
 
     /** StringBuilder to track the player's current progress (guessed letters and underscores). */
     private StringBuilder currentGuess;

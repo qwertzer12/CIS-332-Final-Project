@@ -38,7 +38,7 @@ public class NavbarController {
      * 
      * @author AJ Chabin
      */
-    public void loadScene2() {
+    public void loadHangman() {
         Preload.switchScene("scene2", "Scene 2");
     }
 
