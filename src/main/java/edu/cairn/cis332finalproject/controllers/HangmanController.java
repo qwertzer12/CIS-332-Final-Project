@@ -28,6 +28,9 @@ public class HangmanController {
         guessInput.requestFocus();
         messageLabel.setText("New game started! You have " + remainingAttempts + " attempts left.");
         System.out.println("Consecutive Wins: " + consecutiveWins + ", Total Wins: " + totalWins);
+
+        // Update the scoreboard
+        updateScoreboard();
     }
     /** The word that the player needs to guess. */
     private final String wordToGuess = "banana"; // You can replace this later with a random word!
@@ -55,6 +58,18 @@ public class HangmanController {
     /** Label that displays messages to the player (e.g., good guess, wrong guess, win/lose messages). */
     @FXML
     private Label messageLabel;
+
+    @FXML
+    private Label totalWinsLabel;
+
+    @FXML
+    private Label consecutiveWinsLabel;
+
+    @FXML
+    private void updateScoreboard() {
+        totalWinsLabel.setText("Total Wins: " + totalWins);
+        consecutiveWinsLabel.setText("Consecutive Wins: " + consecutiveWins);
+    }
 
     /**
      * Initializes the game when the scene is loaded.

@@ -9,6 +9,18 @@
     <!-- Include the navbar -->
     <fx:include source="navbar.fxml"/>
 
+    <!-- Consecutive Wins Label -->
+    <Label fx:id="consecutiveWinsLabel"
+           text="Consecutive Wins: 0"
+           style="-fx-font-size: 16px;"
+           AnchorPane.topAnchor="100.0" AnchorPane.leftAnchor="10.0" />
+
+    <!-- Total Wins Label -->
+    <Label fx:id="totalWinsLabel"
+           text="Total Wins: 0"
+           style="-fx-font-size: 16px;"
+           AnchorPane.topAnchor="100.0" AnchorPane.rightAnchor="10.0" />
+
     <!-- Game Title -->
     <Label text="Hangman Game"
            style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-alignment: center;"
