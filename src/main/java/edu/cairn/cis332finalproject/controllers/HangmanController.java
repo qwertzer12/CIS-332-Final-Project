@@ -9,6 +9,50 @@ import javafx.scene.control.TextField;
  * Manages the UI interactions and game logic.
  */
 public class HangmanController {
+    /**
+     * Static method to get the number of consecutive wins.
+     * This can be used to track the player's performance across multiple games.
+     *
+     * @return the number of consecutive wins
+     */
+    public static int getConsecutiveWins() {
+        return consecutiveWins;
+    }
+
+    /**
+     * Static method to set the number of consecutive wins.
+     * This can be used to update the player's performance across multiple games.
+     *
+     * @param consecutiveWins the number of consecutive wins to set
+     */
+    public static void setConsecutiveWins(int consecutiveWins) {
+        HangmanController.consecutiveWins = consecutiveWins;
+    }
+
+    /**
+     * Static method to get the total number of wins.
+     * This can be used to track the player's overall performance.
+     *
+     * @return the total number of wins
+     */
+    public static int getTotalWins() {
+        return totalWins;
+    }
+
+    /**
+     * Static method to set the total number of wins.
+     * This can be used to update the player's overall performance.
+     *
+     * @param totalWins the total number of wins to set
+     */
+    public static void setTotalWins(int totalWins) {
+        HangmanController.totalWins = totalWins;
+    }
+
+    /**
+     * Static method to load a new game.
+     * This resets the game state and prepares the UI for a new round.
+     */
     public void load() {
         // Reset game state
         currentGuess = new StringBuilder();
@@ -30,6 +74,12 @@ public class HangmanController {
 
     /** Number of remaining attempts the player has before losing. */
     private int remainingAttempts = 6;
+
+    /** Number of consecutive wins*/
+    private static int consecutiveWins = 0;
+
+    /** Number of total wins */
+    private static int totalWins = 0;
 
     /** Label that displays the masked version of the word (with underscores and revealed letters). */
     @FXML
