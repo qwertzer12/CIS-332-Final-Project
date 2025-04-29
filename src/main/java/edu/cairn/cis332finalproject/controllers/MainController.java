@@ -56,6 +56,17 @@ public class MainController {
     }
 
     /**
+     * Gets the username of the currently logged-in user.
+     *
+     * @return the username
+     *
+     * @author AJ Chabin
+     */
+    public String getUsername() {
+        return username;
+    }
+
+    /**
      * Updates the welcome message based on username availability.
      * Displays a personalized message if username is present.
      * 

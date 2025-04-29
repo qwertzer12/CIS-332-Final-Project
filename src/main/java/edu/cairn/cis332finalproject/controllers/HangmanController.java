@@ -1,5 +1,7 @@
 package edu.cairn.cis332finalproject.controllers;
 
+import edu.cairn.cis332finalproject.DataStorage;
+import edu.cairn.cis332finalproject.Preload;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -25,6 +27,7 @@ public class HangmanController {
         guessInput.setDisable(false);  // Re-enable input if it was disabled after game end
         guessInput.requestFocus();
         messageLabel.setText("New game started! You have " + remainingAttempts + " attempts left.");
+        System.out.println("Consecutive Wins: " + consecutiveWins + ", Total Wins: " + totalWins);
     }
     /** The word that the player needs to guess. */
     private final String wordToGuess = "banana"; // You can replace this later with a random word!
@@ -107,10 +110,17 @@ public class HangmanController {
             guessInput.setDisable(true);
             totalWins++;
             consecutiveWins++;
+            // Save the game data (e.g., to a file or database)
+            MainController mainController = Preload.getController("main");
+            assert mainController != null;
+            DataStorage.saveHangmanData(mainController.getUsername(), new int[]{consecutiveWins, totalWins});
         } else if (remainingAttempts <= 0) {
             messageLabel.setText("Game over! The word was: " + wordToGuess);
             guessInput.setDisable(true);
             consecutiveWins = 0; // Reset consecutive wins on loss
+            MainController mainController = Preload.getController("main");
+            assert mainController != null;
+            DataStorage.saveHangmanData(mainController.getUsername(), new int[]{consecutiveWins, totalWins});
         }
     }
 }
