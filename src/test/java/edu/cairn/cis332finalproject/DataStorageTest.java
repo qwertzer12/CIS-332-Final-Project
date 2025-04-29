@@ -108,4 +108,13 @@ class DataStorageTest {
         assertEquals(testLogins, testLogins2);
 
     }
+
+    @Test
+    void HangmanData(){
+        UserData userData = new UserData("testUser", 12345);
+        int[] info = {1, 2};
+        DataStorage.saveHangmanData(userData.getUsername(), info);
+        int[] testInfo = DataStorage.loadHangmanData(userData.getUsername());
+        System.out.println("testInfo: " + testInfo[0] + ", " + testInfo[1]);
+    }
 }

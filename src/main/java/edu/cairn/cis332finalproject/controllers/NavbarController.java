@@ -34,12 +34,17 @@ public class NavbarController {
     }
 
     /**
-     * Switches to scene 2.
-     * 
+     * Switches to the Hangman game view.
+     * Loads the hangman controller and initializes it.
+     *
      * @author AJ Chabin
      */
-    public void loadScene2() {
-        Preload.switchScene("scene2", "Scene 2");
+    public void loadHangman() {
+        HangmanController hangmanController = Preload.getController("hangman");
+        if (hangmanController != null) {
+            hangmanController.load();
+        }
+        Preload.switchScene("hangman", "Hangman");
     }
 
     /**

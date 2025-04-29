@@ -3,18 +3,32 @@
     <output-path>$PROJECT_DIR$/out/artifacts/CIS_332_Final_Project</output-path>
     <properties id="javafx-properties">
       <options>
-        <option name="appClass" value="edu.cairn.cis332finalproject.HelloApplication" />
+        <option name="appClass" value="edu.cairn.cis332finalproject.MainLauncher" />
         <option name="description" value="" />
         <option name="htmlPlaceholderId" value="" />
-        <option name="title" value="" />
+        <option name="title" value="Swiss Army App" />
         <option name="vendor" value="" />
         <option name="version" value="" />
       </options>
     </properties>
     <root id="root">
       <element id="archive" name="CIS_332_Final_Project.jar">
+        <element id="directory" name="META-INF">
+          <element id="file-copy" path="$PROJECT_DIR$/src/main/META-INF/MANIFEST.MF" />
+        </element>
         <element id="module-output" name="CIS-332-Final-Project" />
       </element>
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-base:24.0.1" />
+      <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.18.3" />
+      <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-core:2.18.3" />
+      <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.18.3" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-base:mac-aarch64:24.0.1" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-controls:24.0.1" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-controls:mac-aarch64:24.0.1" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-fxml:24.0.1" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-fxml:mac-aarch64:24.0.1" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-graphics:24.0.1" />
+      <element id="library" level="project" name="Maven: org.openjfx:javafx-graphics:mac-aarch64:24.0.1" />
     </root>
   </artifact>
 </component>
