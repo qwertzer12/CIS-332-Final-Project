@@ -14,6 +14,8 @@ public class UserData {
     private final Queue<Date> logins = new LinkedList<>();
     private String username;
     private int userID;
+    private int consecutiveWins = 0;
+    private int totalWins = 0;
 
     /**
      * Default constructor for Jackson deserialization.
@@ -99,5 +101,21 @@ public class UserData {
      */
     public Queue<Date> getLogins() {
         return logins;
+    }
+
+    public int getConsecutiveWins() {
+        return consecutiveWins;
+    }
+
+    public void setConsecutiveWins(int consecutiveWins) {
+        this.consecutiveWins = consecutiveWins;
+    }
+
+    public int getTotalWins() {
+        return totalWins;
+    }
+
+    public void setTotalWins(int totalWins) {
+        this.totalWins = totalWins;
     }
 }

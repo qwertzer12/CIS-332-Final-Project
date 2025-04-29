@@ -114,4 +114,22 @@ public class DataStorage {
         Map<String, UserData> data = loadData();
         return data.size();
     }
+
+    public static void saveHangmanData(String username, int[] info) {
+        UserData user = loadUser(username);
+        if (user == null) {
+            user = new UserData(username, getUserCount() + 1);
+        }
+        user.setConsecutiveWins(info[0]);
+        user.setTotalWins(info[1]);
+        saveUser(user);
+    }
+
+    public static int[] loadHangmanData(String username) {
+        UserData user = loadUser(username);
+        int[] info = new int[2];
+        info[0] = user.getConsecutiveWins();
+        info[1] = user.getTotalWins();
+        return info;
+    }
 }

@@ -10,47 +10,7 @@ import javafx.scene.control.TextField;
  */
 public class HangmanController {
     /**
-     * Static method to get the number of consecutive wins.
-     * This can be used to track the player's performance across multiple games.
-     *
-     * @return the number of consecutive wins
-     */
-    public static int getConsecutiveWins() {
-        return consecutiveWins;
-    }
-
-    /**
-     * Static method to set the number of consecutive wins.
-     * This can be used to update the player's performance across multiple games.
-     *
-     * @param consecutiveWins the number of consecutive wins to set
-     */
-    public static void setConsecutiveWins(int consecutiveWins) {
-        HangmanController.consecutiveWins = consecutiveWins;
-    }
-
-    /**
-     * Static method to get the total number of wins.
-     * This can be used to track the player's overall performance.
-     *
-     * @return the total number of wins
-     */
-    public static int getTotalWins() {
-        return totalWins;
-    }
-
-    /**
-     * Static method to set the total number of wins.
-     * This can be used to update the player's overall performance.
-     *
-     * @param totalWins the total number of wins to set
-     */
-    public static void setTotalWins(int totalWins) {
-        HangmanController.totalWins = totalWins;
-    }
-
-    /**
-     * Static method to load a new game.
+     * method to load a new game.
      * This resets the game state and prepares the UI for a new round.
      */
     public void load() {
@@ -76,10 +36,10 @@ public class HangmanController {
     private int remainingAttempts = 6;
 
     /** Number of consecutive wins*/
-    private static int consecutiveWins = 0;
+    private int consecutiveWins = 0;
 
     /** Number of total wins */
-    private static int totalWins = 0;
+    private int totalWins = 0;
 
     /** Label that displays the masked version of the word (with underscores and revealed letters). */
     @FXML
@@ -145,9 +105,12 @@ public class HangmanController {
         if (!currentGuess.toString().contains("_")) {
             messageLabel.setText("Congratulations! You won!");
             guessInput.setDisable(true);
+            totalWins++;
+            consecutiveWins++;
         } else if (remainingAttempts <= 0) {
             messageLabel.setText("Game over! The word was: " + wordToGuess);
             guessInput.setDisable(true);
+            consecutiveWins = 0; // Reset consecutive wins on loss
         }
     }
 }
