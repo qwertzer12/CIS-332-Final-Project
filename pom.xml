@@ -114,7 +114,6 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <aggregate>false</aggregate>
                     <destDir>javadocs</destDir>
                     <outputDirectory>${project.basedir}</outputDirectory>
                 </configuration>

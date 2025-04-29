@@ -25,7 +25,8 @@
     <!-- Input Text Field -->
     <TextField fx:id="guessInput"
                promptText="Enter a letter"
-               AnchorPane.topAnchor="220.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.0" />
+               AnchorPane.topAnchor="220.0" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="150.0"
+                onAction="#handleGuess"/>
 
     <!-- Guess Button -->
     <Button text="Guess"
