@@ -27,6 +27,10 @@ public class HangmanGame {
         }
     }
 
+    public String getWord() {
+        return word;
+    }
+
     public String getMaskedWord() {
         StringBuilder masked = new StringBuilder();
         for (char c : word.toCharArray()) {
