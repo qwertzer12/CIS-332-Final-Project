@@ -12,6 +12,7 @@
             <TextField fx:id="guessInput" promptText="Enter a letter" maxWidth="100"/>
             <Button text="Guess" onAction="#handleGuess"/>
             <Label fx:id="attemptsLabel" text="Attempts left: 6"/>
+            <Label fx:id="scoreLabel" layoutX="50" layoutY="200" />
         </VBox>
     </children>
 </AnchorPane>
