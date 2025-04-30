@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.layout.*?>
-<HBox xmlns:fx="http://javafx.com/fxml/1" alignment="CENTER" spacing="10" AnchorPane.leftAnchor="10.0"
-      AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" xmlns="http://javafx.com/javafx/17.0.12"
-      fx:controller="edu.cairn.cis332finalproject.controllers.NavbarController">
-    <Button onAction="#loadTipCalculator" text="Tip Calculator"/>
-    <Button onAction="#loadScene2" text="Scene 2"/>
-    <Button onAction="#loadScene3" text="Scene 3"/>
-    <Region HBox.hgrow="ALWAYS"/>
-    <Button onAction="#handleLogout" text="Logout"/>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.text.Font?>
+
+<HBox alignment="CENTER" spacing="10" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.cairn.cis332finalproject.controllers.NavbarController">
+    <Button onAction="#loadTipCalculator" text="Tip Calculator" textFill="#300be0" />
+    <Button onAction="#loadScene2" text="Scene 2" textFill="#e11111" />
+    <Button onAction="#loadScene3" text="Scene 3" textFill="#0b84e0">
+      <font>
+         <Font name="Avenir Roman" size="13.0" />
+      </font></Button>
+    <Region HBox.hgrow="ALWAYS" />
+    <Button onAction="#handleLogout" text="Logout" textFill="#f20606" />
 </HBox>
