@@ -3,12 +3,15 @@ package controller;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import model.HangmanGame;
+import model.HangmanScoreboard;
 
 public class HangmanController {
     @FXML private Label wordLabel;
     @FXML private Label messageLabel;
     @FXML private Label attemptsLabel;
     @FXML private TextField guessInput;
+    @FXML private Label scoreLabel;
+private final HangmanScoreboard scoreboard = new HangmanScoreboard();
 
     private HangmanGame game;
 
@@ -29,12 +32,19 @@ public class HangmanController {
     }
 
     private void updateUI() {
-        wordLabel.setText(game.getMaskedWord());
-        messageLabel.setText(game.getMessage());
-        attemptsLabel.setText("Attempts left: " + game.getAttemptsLeft());
+    wordLabel.setText(game.getMaskedWord());
+    messageLabel.setText(game.getMessage());
+    attemptsLabel.setText("Attempts left: " + game.getAttemptsLeft());
 
-        if (game.isGameOver()) {
-            guessInput.setDisable(true);
+    if (game.isGameOver()) {
+        guessInput.setDisable(true);
+        String currentWord = game.getMaskedWord().replace(" ", "");
+        if (currentWord.equals(game.getWord())) {
+            scoreboard.addWin();
+        } else {
+            scoreboard.addLoss();
         }
     }
+
+    scoreLabel.setText(scoreboard.toString());
 }

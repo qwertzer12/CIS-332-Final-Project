@@ -55,6 +55,10 @@ public class HangmanGame {
         }
     }
 
+    public String getWord() {
+        return word;
+    }
+  
     /**
      * Returns the word in masked form for display (e.g. "_ a _ a _ a").
      * Reveals guessed letters, hides others with underscores.
