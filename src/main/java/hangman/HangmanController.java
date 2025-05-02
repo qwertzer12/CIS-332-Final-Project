@@ -32,19 +32,20 @@ private final HangmanScoreboard scoreboard = new HangmanScoreboard();
     }
 
     private void updateUI() {
-    wordLabel.setText(game.getMaskedWord());
-    messageLabel.setText(game.getMessage());
-    attemptsLabel.setText("Attempts left: " + game.getAttemptsLeft());
+        wordLabel.setText(game.getMaskedWord());
+        messageLabel.setText(game.getMessage());
+        attemptsLabel.setText("Attempts left: " + game.getAttemptsLeft());
 
-    if (game.isGameOver()) {
-        guessInput.setDisable(true);
-        String currentWord = game.getMaskedWord().replace(" ", "");
-        if (currentWord.equals(game.getWord())) {
-            scoreboard.addWin();
-        } else {
-            scoreboard.addLoss();
+        if (game.isGameOver()) {
+            guessInput.setDisable(true);
+            String currentWord = game.getMaskedWord().replace(" ", "");
+            if (currentWord.equals(game.getWord())) {
+                scoreboard.addWin();
+            } else {
+                scoreboard.addLoss();
+            }
+            scoreLabel.setText(scoreboard.toString());
         }
     }
 
-    scoreLabel.setText(scoreboard.toString());
 }
