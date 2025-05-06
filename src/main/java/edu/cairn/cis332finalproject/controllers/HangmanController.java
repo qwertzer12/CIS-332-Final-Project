@@ -5,6 +5,7 @@ import edu.cairn.cis332finalproject.Preload;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import java.util.Random;
 
 /**
  * Controller class for Scene2, where the Hangman game is played.
@@ -18,6 +19,7 @@ public class HangmanController {
     public void load() {
         // Reset game state
         currentGuess = new StringBuilder();
+        wordToGuess = words[new Random().nextInt(words.length)];
         currentGuess.append("_ ".repeat(wordToGuess.length()));
         remainingAttempts = 6;
 
@@ -33,7 +35,7 @@ public class HangmanController {
         updateScoreboard();
     }
     /** The word that the player needs to guess. */
-    private final String wordToGuess = "banana"; // You can replace this later with a random word!
+    private String wordToGuess = "banana"; // You can replace this later with a random word!
 
     /** StringBuilder to track the player's current progress (guessed letters and underscores). */
     private StringBuilder currentGuess;
@@ -43,6 +45,14 @@ public class HangmanController {
 
     /** Number of consecutive wins*/
     private int consecutiveWins = 0;
+
+    /** Array of words to choose from. */
+    private final String[] words = {
+            "korea", "table", "highlands", "cairn", "computer", "science", "engineering",
+            "clock", "keyboard", "mouse", "clouds", "classroom", "ethernet", "internet",
+            "rebels", "alliance", "empire", "stormtrooper", "venator", "general",
+            "emperor", "galaxy"
+    };
 
     /** Number of total wins */
     private int totalWins = 0;
