@@ -5,6 +5,8 @@ import javafx.scene.control.*;
 import model.HangmanGame;
 import model.HangmanScoreboard;
 
+import java.util.Random;
+
 public class HangmanController {
 
     // FXML-injected UI components from the corresponding .fxml file
@@ -20,12 +22,22 @@ public class HangmanController {
     // Game logic instance
     private HangmanGame game;
 
+    // List of possible words to be randomly chosen
+    private final String[] words = {
+        "korea", "table", "highlands", "cairn", "computer", "science", "engineering",
+        "clock", "keyboard", "mouse", "clouds", "classroom", "ethernet", "internet",
+        "rebels", "alliance", "empire", "stormtrooper", "venator", "general",
+        "emperor", "galaxy"
+    };
+
     // Called automatically when the controller is initialized
     @FXML
     public void initialize() {
-        // Initializes a new game with the word "banana"
-        game = new HangmanGame("banana");
-        // Updates the UI with the initial game state
+        // Pick a random word from the list
+        String chosenWord = words[new Random().nextInt(words.length)];
+        // Initialize the game with the chosen word
+        game = new HangmanGame(chosenWord);
+        // Update the UI with the new game state
         updateUI();
     }
 
@@ -71,4 +83,3 @@ public class HangmanController {
         }
     }
 }
-
